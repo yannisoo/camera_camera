@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:camera/camera.dart';
-import 'package:camera_camera/src/core/camera_notifier.dart';
-import 'package:camera_camera/src/core/camera_service.dart';
-import 'package:camera_camera/src/core/camera_status.dart';
-import 'package:camera_camera/src/presentation/widgets/camera_preview.dart';
-import 'package:camera_camera/src/shared/entities/camera_mode.dart';
-import 'package:camera_camera/src/shared/entities/camera_side.dart';
+import 'package:camera_camera_overlay/src/core/camera_notifier.dart';
+import 'package:camera_camera_overlay/src/core/camera_service.dart';
+import 'package:camera_camera_overlay/src/core/camera_status.dart';
+import 'package:camera_camera_overlay/src/presentation/widgets/camera_preview.dart';
+import 'package:camera_camera_overlay/src/shared/entities/camera_mode.dart';
+import 'package:camera_camera_overlay/src/shared/entities/camera_side.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +30,9 @@ class CameraCamera extends StatefulWidget {
   ///permission on Android
   final bool enableAudio;
 
+  /// Widget displayed between the camera and the buttons
+  final Widget? overlay;
+
   //You can define your prefered aspect ratio, 1:1, 16:9, 4:3 or full screen
   final CameraMode mode;
 
@@ -37,6 +40,7 @@ class CameraCamera extends StatefulWidget {
     Key? key,
     this.resolutionPreset = ResolutionPreset.ultraHigh,
     required this.onFile,
+    this.overlay,
     this.cameraSide = CameraSide.all,
     this.flashModes = FlashMode.values,
     this.mode = CameraMode.ratio16s9,
@@ -103,6 +107,7 @@ class _CameraCameraState extends State<CameraCamera> {
                         enableZoom: widget.enableZoom,
                         key: UniqueKey(),
                         controller: controller,
+                        overlay: widget.overlay,
                       ),
                       if (this.controller.status.preview.cameras.length > 1)
                         Align(

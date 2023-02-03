@@ -1,7 +1,7 @@
-name: camera_camera
+name: camera_camera_overlay
 description: The easy plugin camera for your project, platforms Android and iOS.
-version: 3.0.0-dev
-repository: https://github.com/gabuldev/camera_camera
+version: 1.0.0+1
+repository: https://github.com/yannisoo/camera_camera
 homepage: https://gabul.dev/
 publish_to:
 funding: 

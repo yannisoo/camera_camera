@@ -1,6 +1,6 @@
-import 'package:camera_camera/src/presentation/controller/camera_camera_controller.dart';
-import 'package:camera_camera/src/presentation/controller/camera_camera_status.dart';
-import 'package:camera_camera/src/shared/entities/camera_mode.dart';
+import 'package:camera_camera_overlay/src/presentation/controller/camera_camera_controller.dart';
+import 'package:camera_camera_overlay/src/presentation/controller/camera_camera_status.dart';
+import 'package:camera_camera_overlay/src/shared/entities/camera_mode.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,10 +8,12 @@ import 'package:flutter/services.dart';
 class CameraCameraPreview extends StatefulWidget {
   final void Function(String value)? onFile;
   final CameraCameraController controller;
+  final Widget? overlay;
   final bool enableZoom;
   CameraCameraPreview({
     Key? key,
     this.onFile,
+    this.overlay,
     required this.controller,
     required this.enableZoom,
   }) : super(key: key);
@@ -61,6 +63,7 @@ class _CameraCameraPreviewState extends State<CameraCameraPreview> {
                         ),
                       ),
                     ],
+                    if (widget.overlay != null) widget.overlay!,
                     if (camera.zoom != null && widget.enableZoom)
                       Positioned(
                         bottom: 116,

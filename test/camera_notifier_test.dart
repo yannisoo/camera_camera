@@ -1,9 +1,9 @@
-import 'package:camera_camera/camera_camera.dart';
-import 'package:camera_camera/src/core/camera_notifier.dart';
-import 'package:camera_camera/src/core/camera_service.dart';
-import 'package:camera_camera/src/core/camera_status.dart';
-import 'package:camera_camera/src/presentation/controller/camera_camera_controller.dart';
-import 'package:camera_camera/src/shared/entities/camera_mode.dart';
+import 'package:camera_camera_overlay/camera_camera.dart';
+import 'package:camera_camera_overlay/src/core/camera_notifier.dart';
+import 'package:camera_camera_overlay/src/core/camera_service.dart';
+import 'package:camera_camera_overlay/src/core/camera_status.dart';
+import 'package:camera_camera_overlay/src/presentation/controller/camera_camera_controller.dart';
+import 'package:camera_camera_overlay/src/shared/entities/camera_mode.dart';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

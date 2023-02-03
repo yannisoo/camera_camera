@@ -1,5 +1,5 @@
 import 'package:camera/camera.dart';
-import 'package:camera_camera/src/presentation/controller/camera_camera_controller.dart';
+import 'package:camera_camera_overlay/src/presentation/controller/camera_camera_controller.dart';
 
 abstract class CameraStatus {
   @override

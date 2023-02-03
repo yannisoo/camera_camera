@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
-import 'package:camera_camera/src/shared/entities/camera.dart';
-import 'package:camera_camera/src/shared/entities/camera_mode.dart';
+import 'package:camera_camera_overlay/src/shared/entities/camera.dart';
+import 'package:camera_camera_overlay/src/shared/entities/camera_mode.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
